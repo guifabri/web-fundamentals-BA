@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="fries-rain" aria-hidden="true"></div>
     <header class="sticky-navbar">
         <nav aria-label="Navegación principal">
             <a class="brand" href="index.html">
@@ -15,7 +16,13 @@
                 <span>Fast Food Gourmet</span>
             </a>
 
-            <ul>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="main-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#menu">Menú</a></li>
                 <li><a href="#postres">Postres</a></li>
@@ -372,5 +379,39 @@
             <a href="#contacto">Facebook</a>
         </nav>
     </footer>
+
+    <script>
+        const friesRain = document.querySelector('.fries-rain');
+        const fryCount = 24;
+
+        for (let index = 0; index < fryCount; index += 1) {
+            const fry = document.createElement('span');
+            fry.className = 'falling-fry';
+            fry.textContent = '🍟';
+            fry.style.left = `${Math.random() * 100}%`;
+            fry.style.animationDelay = `${Math.random() * -12}s`;
+            fry.style.animationDuration = `${7 + Math.random() * 7}s`;
+            fry.style.fontSize = `${1 + Math.random() * 0.8}rem`;
+            friesRain.appendChild(fry);
+        }
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainMenu = document.querySelector('#main-menu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+            mainMenu.classList.toggle('is-open', !isOpen);
+        });
+
+        mainMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Abrir menú');
+                mainMenu.classList.remove('is-open');
+            });
+        });
+    </script>
 </body>
 </html>
