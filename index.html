@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="fries-rain" aria-hidden="true"></div>
+    <audio id="site-sound" preload="auto" src="sonidos/consome%20panchi%202.mp3"></audio>
     <header class="sticky-navbar">
         <nav aria-label="Navegación principal">
             <a class="brand" href="index.html">
@@ -21,6 +22,8 @@
                 <span></span>
                 <span></span>
             </button>
+
+            <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonidos">🔇</button>
 
             <ul id="main-menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -397,12 +400,39 @@
 
         const menuToggle = document.querySelector('.menu-toggle');
         const mainMenu = document.querySelector('#main-menu');
+        const soundToggle = document.querySelector('.sound-toggle');
+        const siteSound = document.querySelector('#site-sound');
+        let soundEnabled = false;
+
+        const playSound = () => {
+            if (!soundEnabled) {
+                return;
+            }
+
+            siteSound.currentTime = 0;
+            siteSound.play().catch(() => {});
+        };
+
+        soundToggle.addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            soundToggle.setAttribute('aria-pressed', String(soundEnabled));
+            soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonidos' : 'Activar sonidos');
+            soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+
+            if (soundEnabled) {
+                playSound();
+            } else {
+                siteSound.pause();
+                siteSound.currentTime = 0;
+            }
+        });
 
         menuToggle.addEventListener('click', () => {
             const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', String(!isOpen));
             menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
             mainMenu.classList.toggle('is-open', !isOpen);
+            playSound();
         });
 
         mainMenu.querySelectorAll('a').forEach((link) => {
@@ -410,7 +440,12 @@
                 menuToggle.setAttribute('aria-expanded', 'false');
                 menuToggle.setAttribute('aria-label', 'Abrir menú');
                 mainMenu.classList.remove('is-open');
+                playSound();
             });
+        });
+
+        document.querySelectorAll('.cta, article a, #contacto > a').forEach((action) => {
+            action.addEventListener('click', playSound);
         });
     </script>
 </body>

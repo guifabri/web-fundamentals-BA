@@ -164,6 +164,34 @@ header li a:focus-visible {
     transform: translateY(-0.4rem) rotate(-45deg);
 }
 
+.sound-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 4px;
+    background: transparent;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.sound-toggle:hover,
+.sound-toggle:focus-visible,
+.sound-toggle[aria-pressed="true"] {
+    border-color: var(--yellow);
+    background: rgba(244, 162, 97, 0.16);
+    transform: translateY(-2px);
+}
+
+.sound-toggle:focus-visible {
+    outline: 2px solid var(--yellow);
+    outline-offset: 4px;
+}
+
 .brand,
 footer > p {
     display: flex;
@@ -622,13 +650,20 @@ footer > p {
     }
 
     .brand {
-        max-width: calc(100% - 60px);
+        min-width: 0;
+        max-width: none;
+        flex: 1 1 auto;
         font-size: clamp(1rem, 4vw, 1.25rem);
     }
 
     .menu-toggle {
         display: block;
         flex: 0 0 auto;
+    }
+
+    .sound-toggle {
+        display: flex;
+        flex: 0 0 44px;
     }
 
     header ul {
