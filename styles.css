@@ -105,8 +105,8 @@ a {
 }
 
 header nav,
-footer,
-main > section {
+main > section,
+.content-with-aside {
     width: min(1120px, calc(100% - 3rem));
     margin-right: auto;
     margin-left: auto;
@@ -193,7 +193,7 @@ header li a:focus-visible {
 }
 
 .brand,
-footer > p {
+.footer-inner > p {
     display: flex;
     align-items: center;
     gap: 0.7rem;
@@ -233,7 +233,8 @@ footer nav a:hover {
     color: var(--yellow);
 }
 
-main > section:not(.hero) {
+main > section:not(.hero),
+.content-with-aside > section {
     padding-top: 5rem;
     padding-bottom: 5rem;
     scroll-margin-top: 1rem;
@@ -533,21 +534,32 @@ article a {
     background: var(--green);
 }
 
-main > section[aria-labelledby="titulo-pedido"] {
+.content-with-aside {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+    gap: 2rem;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+}
+
+.content-with-aside > aside[aria-labelledby="titulo-pedido"] {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    width: 100%;
+    margin: 0;
     background: var(--green);
     color: var(--white);
     text-align: center;
 }
 
-main > section[aria-labelledby="titulo-pedido"] h2 {
+.content-with-aside > aside[aria-labelledby="titulo-pedido"] h2 {
     margin-bottom: 0;
 }
 
-main > section[aria-labelledby="titulo-pedido"] ol {
+.content-with-aside > aside[aria-labelledby="titulo-pedido"] ol {
     display: grid;
     gap: 1.25rem;
     width: min(100%, 760px);
@@ -556,45 +568,190 @@ main > section[aria-labelledby="titulo-pedido"] ol {
     text-align: center;
 }
 
-main > section[aria-labelledby="titulo-pedido"] li {
+.content-with-aside > aside[aria-labelledby="titulo-pedido"] li {
     padding-left: 0.5rem;
     color: #f7ead2;
     text-align: center;
 }
 
-main > section[aria-labelledby="titulo-pedido"] strong {
+.content-with-aside > aside[aria-labelledby="titulo-pedido"] strong {
     color: var(--yellow);
 }
 
-main > section[aria-labelledby="titulo-opiniones"] {
+#opiniones {
+    position: relative;
+    width: 100%;
+    padding: 5.5rem 1.5rem;
+    overflow: hidden;
+    scroll-margin-top: 1rem;
+    background:
+        radial-gradient(1200px 420px at 15% -10%, rgba(244, 162, 97, 0.18), transparent 60%),
+        radial-gradient(1000px 420px at 90% 110%, rgba(214, 40, 40, 0.2), transparent 60%),
+        var(--charcoal);
+    color: var(--white);
+}
+
+#opiniones::before {
+    position: absolute;
+    top: -4rem;
+    right: 4%;
+    color: rgba(244, 162, 97, 0.09);
+    content: '”';
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.opiniones-inner {
+    position: relative;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+}
+
+.opiniones-head {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.opiniones-head > p {
+    margin-bottom: 1rem;
+    color: var(--yellow);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.opiniones-head h2 {
+    margin-bottom: 1.25rem;
+}
+
+.opiniones-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    color: #f7ead2;
+}
+
+.opiniones-rating > span:first-child {
+    color: #ffb703;
+    font-size: 1.15rem;
+    letter-spacing: 0.2em;
+}
+
+.opiniones-rating strong {
+    color: var(--yellow);
+}
+
+.opiniones-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
-main > section[aria-labelledby="titulo-opiniones"] h2 {
-    grid-column: 1 / -1;
-}
-
-blockquote {
+.opinion-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
     margin: 0;
-    padding: 2rem;
-    border-left: 5px solid var(--red);
+    padding: 1.75rem 1.75rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
     background: var(--white);
+    box-shadow: var(--shadow);
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
-blockquote p {
-    margin-bottom: 1rem;
+.opinion-card::after {
+    position: absolute;
+    top: 0.4rem;
+    right: 1.1rem;
+    color: rgba(214, 40, 40, 0.22);
+    content: '”';
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.4rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.opinion-card:hover {
+    border-color: rgba(244, 162, 97, 0.8);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    transform: translateY(-8px);
+}
+
+.opinion-stars {
+    color: #ffb703;
+    font-size: 1.05rem;
+    letter-spacing: 0.18em;
+}
+
+.opinion-card blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.opinion-card blockquote p {
+    margin: 0;
     color: var(--charcoal);
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
-blockquote cite {
-    color: var(--green);
+.opinion-card figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+}
+
+.opinion-avatar {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--red), #ff8c42);
+    color: var(--white);
     font-size: 0.9rem;
-    font-style: normal;
     font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.opinion-card:nth-child(2n) .opinion-avatar {
+    background: linear-gradient(135deg, #e76f51, var(--yellow));
+}
+
+.opinion-card:nth-child(3n) .opinion-avatar {
+    background: linear-gradient(135deg, var(--green), #6a994e);
+}
+
+.opinion-card:nth-child(4n) .opinion-avatar {
+    background: linear-gradient(135deg, #7b2cbf, #e95bcb);
+}
+
+.opinion-card figcaption strong {
+    display: block;
+    margin-bottom: 0.1rem;
+    color: var(--charcoal);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.05rem;
+}
+
+.opinion-card figcaption small {
+    color: #8a7a60;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 #contacto {
@@ -620,23 +777,30 @@ blockquote cite {
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 110px;
     border-top: 1px solid #3e3e3e;
     background: var(--charcoal);
 }
 
-footer > p {
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1120px, calc(100% - 3rem));
+    min-height: 110px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-inner > p {
     margin-bottom: 0;
     font-size: 1rem;
 }
 
 @media (max-width: 800px) {
     header nav,
-    footer,
-    main > section {
+    main > section,
+    .content-with-aside,
+    .footer-inner {
         width: min(100% - 2rem, 620px);
     }
 
@@ -678,14 +842,16 @@ footer > p {
         animation: menu-reveal 180ms ease-out;
     }
 
-    main > section {
+    main > section,
+    .content-with-aside > section,
+    .content-with-aside > aside[aria-labelledby="titulo-pedido"] {
         padding-top: 4.5rem;
         padding-bottom: 4.5rem;
     }
 
     #inicio,
     #promociones,
-    main > section[aria-labelledby="titulo-pedido"] {
+    .content-with-aside {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
@@ -704,6 +870,14 @@ footer > p {
         columns: 2 220px;
     }
 
+    #opiniones {
+        padding: 4.5rem 2rem;
+    }
+
+    .opiniones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     #promociones {
         width: min(100% - 2rem, 620px);
     }
@@ -713,7 +887,7 @@ footer > p {
         margin-right: 0;
     }
 
-    footer {
+    .footer-inner {
         align-items: flex-start;
         flex-direction: column;
         gap: 1rem;
@@ -739,17 +913,12 @@ footer > p {
         font-size: 3.25rem;
     }
 
-    main > section[aria-labelledby="titulo-opiniones"] {
+    .opiniones-grid {
         grid-template-columns: 1fr;
     }
 
     .product-gallery {
         columns: 1;
-    }
-
-    main > section[aria-labelledby="titulo-opiniones"] h2 {
-        grid-column: auto;
-        width: auto;
     }
 
     #promociones > article {
@@ -771,7 +940,8 @@ footer > p {
     }
 
     .menu-toggle span,
-    header ul.is-open {
+    header ul.is-open,
+    .opinion-card {
         animation: none;
         transition: none;
     }

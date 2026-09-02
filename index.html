@@ -30,6 +30,7 @@
                 <li><a href="#menu">Menú</a></li>
                 <li><a href="#postres">Postres</a></li>
                 <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#opiniones">Opiniones</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -329,39 +330,129 @@
             </div>
         </section>
 
-        <section id="promociones" aria-labelledby="titulo-promociones">
-            <p>Para compartir</p>
-            <h2 id="titulo-promociones">Promociones de la semana</h2>
+        <div class="content-with-aside">
+            <section id="promociones" aria-labelledby="titulo-promociones">
+                <p>Para compartir</p>
+                <h2 id="titulo-promociones">Promociones de la semana</h2>
 
-            <article>
-                <img src="images/istockphoto-2001893851-612x612.jpg" alt="Combo de comida rápida para compartir">
-                <h3>Combo Gourmet</h3>
-                <p>Dos hamburguesas, papas grandes y dos bebidas.</p>
-                <p>Precio especial: $19.99</p>
-                <a href="#contacto">Ordenar promoción</a>
-            </article>
-        </section>
+                <article>
+                    <img src="images/istockphoto-2001893851-612x612.jpg" alt="Combo de comida rápida para compartir">
+                    <h3>Combo Gourmet</h3>
+                    <p>Dos hamburguesas, papas grandes y dos bebidas.</p>
+                    <p>Precio especial: $19.99</p>
+                    <a href="#contacto">Ordenar promoción</a>
+                </article>
+            </section>
 
-        <section aria-labelledby="titulo-pedido">
-            <h2 id="titulo-pedido">Pide en tres pasos</h2>
-            <ol>
-                <li><strong>Elige:</strong> revisa nuestro menú y selecciona tus favoritos.</li>
-                <li><strong>Escríbenos:</strong> envíanos tu pedido por el medio de contacto.</li>
-                <li><strong>Disfruta:</strong> recibe tu comida o recógela en el restaurante.</li>
-            </ol>
-        </section>
+            <aside aria-labelledby="titulo-pedido">
+                <h2 id="titulo-pedido">Pide en tres pasos</h2>
+                <ol>
+                    <li><strong>Elige:</strong> revisa nuestro menú y selecciona tus favoritos.</li>
+                    <li><strong>Escríbenos:</strong> envíanos tu pedido por el medio de contacto.</li>
+                    <li><strong>Disfruta:</strong> recibe tu comida o recógela en el restaurante.</li>
+                </ol>
+            </aside>
+        </div>
 
-        <section aria-labelledby="titulo-opiniones">
-            <h2 id="titulo-opiniones">Lo que dicen nuestros clientes</h2>
-            <blockquote>
-                <p>“La hamburguesa tiene un sabor increíble y llegó muy rápido.”</p>
-                <cite>María G.</cite>
-            </blockquote>
-            <blockquote>
-                <p>“El combo perfecto para compartir con amigos.”</p>
-                <cite>Carlos R.</cite>
-            </blockquote>
-        </section>
+        <aside id="opiniones" aria-labelledby="titulo-opiniones">
+            <div class="opiniones-inner">
+                <div class="opiniones-head">
+                    <p>Reseñas reales</p>
+                    <h2 id="titulo-opiniones">Lo que dicen nuestros clientes</h2>
+                    <div class="opiniones-rating" role="img" aria-label="Calificación promedio de 4.9 sobre 5, basado en más de 1,200 reseñas">
+                        <span aria-hidden="true">★★★★★</span>
+                        <strong>4.9 / 5</strong>
+                        <span>Basado en más de 1,200 reseñas</span>
+                    </div>
+                </div>
+
+                <div class="opiniones-grid">
+                    <figure class="opinion-card">
+                        <div class="opinion-stars" role="img" aria-label="Calificación: 5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“La hamburguesa tiene un sabor increíble y llegó muy rápido.”</p>
+                        </blockquote>
+                        <figcaption>
+                            <span class="opinion-avatar" aria-hidden="true">MG</span>
+                            <div>
+                                <strong>María González</strong>
+                                <small>Cliente frecuente</small>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="opinion-card">
+                        <div class="opinion-stars" role="img" aria-label="Calificación: 5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“El combo perfecto para compartir con amigos, llegó caliente y perfecto.”</p>
+                        </blockquote>
+                        <figcaption>
+                            <span class="opinion-avatar" aria-hidden="true">CR</span>
+                            <div>
+                                <strong>Carlos Roldán</strong>
+                                <small>Pide a domicilio</small>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="opinion-card">
+                        <div class="opinion-stars" role="img" aria-label="Calificación: 5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“Las alitas BBQ son las mejores de la ciudad, súper jugosas y con mucho sabor.”</p>
+                        </blockquote>
+                        <figcaption>
+                            <span class="opinion-avatar" aria-hidden="true">LM</span>
+                            <div>
+                                <strong>Lucía Méndez</strong>
+                                <small>Fan de las alitas</small>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="opinion-card">
+                        <div class="opinion-stars" role="img" aria-label="Calificación: 4 de 5 estrellas">★★★★☆</div>
+                        <blockquote>
+                            <p>“Pedí por WhatsApp y en minutos tenía mi postre en la mesa. Todo llegó muy fresco.”</p>
+                        </blockquote>
+                        <figcaption>
+                            <span class="opinion-avatar" aria-hidden="true">AP</span>
+                            <div>
+                                <strong>Andrés Paredes</strong>
+                                <small>Pedido especial</small>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="opinion-card">
+                        <div class="opinion-stars" role="img" aria-label="Calificación: 5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“Ideal para un antojo con calidad gourmet. Las Papas Supreme son adictivas.”</p>
+                        </blockquote>
+                        <figcaption>
+                            <span class="opinion-avatar" aria-hidden="true">VT</span>
+                            <div>
+                                <strong>Valeria Torres</strong>
+                                <small>Cliente frecuente</small>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="opinion-card">
+                        <div class="opinion-stars" role="img" aria-label="Calificación: 5 de 5 estrellas">★★★★★</div>
+                        <blockquote>
+                            <p>“La atención es excelente y la comida siempre llega caliente y deliciosa.”</p>
+                        </blockquote>
+                        <figcaption>
+                            <span class="opinion-avatar" aria-hidden="true">DS</span>
+                            <div>
+                                <strong>Diego Salas</strong>
+                                <small>Cliente desde el día uno</small>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </aside>
 
         <section id="contacto" aria-labelledby="titulo-contacto">
             <h2 id="titulo-contacto">Haz tu pedido</h2>
@@ -376,11 +467,13 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Fast Food Gourmet. Todos los derechos reservados.</p>
-        <nav aria-label="Enlaces de redes sociales">
-            <a href="#contacto">Instagram</a>
-            <a href="#contacto">Facebook</a>
-        </nav>
+        <div class="footer-inner">
+            <p>&copy; 2026 Fast Food Gourmet. Todos los derechos reservados.</p>
+            <nav aria-label="Enlaces de redes sociales">
+                <a href="#contacto">Instagram</a>
+                <a href="#contacto">Facebook</a>
+            </nav>
+        </div>
     </footer>
 
     <script>
