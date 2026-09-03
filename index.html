@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
     <div class="fries-rain" aria-hidden="true"></div>
-    <audio id="site-sound" preload="auto" src="sonidos/consome%20panchi%202.mp3"></audio>
+    <audio id="site-sound" preload="none" src="images/sonidos/consome%20panchi%202.mp3"></audio>
     <header class="sticky-navbar">
         <nav aria-label="Navegación principal">
             <a class="brand" href="index.html">
-                <img src="logo/vector-logo-fast-food-vector-logo-fast-food-signboard-set-fresh-chickenburger-fried-cutlet-salad-chicken-133232307.webp" alt="Logo de Fast Food Gourmet">
+                <img src="images/logo/vector-logo-fast-food-vector-logo-fast-food-signboard-set-fresh-chickenburger-fried-cutlet-salad-chicken-133232307.webp" alt="Logo de Fast Food Gourmet">
                 <span>Fast Food Gourmet</span>
             </a>
 
@@ -21,9 +22,13 @@
                 <span></span>
                 <span></span>
                 <span></span>
+                <span class="visually-hidden">Abrir menú</span>
             </button>
 
-            <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonidos">🔇</button>
+            <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar sonidos">
+                <span aria-hidden="true">🔇</span>
+                <span class="visually-hidden">Activar sonidos</span>
+            </button>
 
             <ul id="main-menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -36,7 +41,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="contenido-principal">
         <section id="inicio" class="hero" aria-labelledby="titulo-principal">
             <section class="hero-content">
                 <p>Comida rápida, sabor extraordinario</p>
@@ -45,7 +50,7 @@
                 <a class="cta" href="#menu">Ordena ahora</a>
             </section>
 
-            <img src="images/istockphoto-1316070459-612x612.jpg" alt="Hamburguesa gourmet servida con papas fritas">
+            <img src="images/istockphoto-1316070459-612x612.jpg" width="612" height="612" alt="Hamburguesa gourmet servida con papas fritas" fetchpriority="high">
         </section>
 
         <section id="menu" aria-labelledby="titulo-menu">
@@ -54,170 +59,170 @@
 
             <div class="product-gallery">
                 <article>
-                    <img src="images/istockphoto-1323507062-612x612.jpg" alt="Hamburguesa artesanal">
+                    <img src="images/istockphoto-1323507062-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Hamburguesa artesanal">
                     <h3>Hamburguesa Gourmet</h3>
-                    <p>Carne jugosa, queso, vegetales frescos y nuestra salsa especial.</p>
+                    <p>Carne jugosa a la parrilla, queso fundido, vegetales frescos y nuestra salsa especial en un pan suave y tostado.</p>
                     <p>Desde $8.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-1398630614-612x612.jpg" alt="Papas fritas crujientes">
+                    <img src="images/istockphoto-1398630614-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Papas fritas crujientes">
                     <h3>Papas Supreme</h3>
-                    <p>Papas crujientes acompañadas de queso y toppings irresistibles.</p>
+                    <p>Papas crujientes acompañadas de queso fundido, tocino, cebollín y toppings irresistibles para compartir.</p>
                     <p>Desde $5.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-1915346242-612x612.jpg" alt="Pizza recién preparada">
+                    <img src="images/istockphoto-1915346242-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Pizza recién preparada">
                     <h3>Pizza Especial</h3>
-                    <p>Masa dorada, queso fundido y una combinación de sabores gourmet.</p>
+                    <p>Masa dorada, queso fundido, ingredientes frescos y una combinación de sabores gourmet horneada al momento.</p>
                     <p>Desde $10.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 
                 <article>
-                    <img src="images/istockphoto-2177216617-612x612.jpg" alt="Hot dog gourmet con ingredientes frescos">
+                    <img src="images/istockphoto-2177216617-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Hot dog gourmet con ingredientes frescos">
                     <h3>Hot Dog Gourmet</h3>
-                    <p>Salchicha premium, pan suave y toppings llenos de sabor.</p>
+                    <p>Salchicha premium a la parrilla, pan suave y toppings frescos con una salsa de la casa llena de sabor.</p>
                     <p>Desde $7.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-2179542678-612x612.jpg" alt="Alitas de pollo con salsa especial">
+                    <img src="images/istockphoto-2179542678-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Alitas de pollo con salsa especial">
                     <h3>Alitas BBQ</h3>
-                    <p>Alitas doradas bañadas en nuestra salsa BBQ ahumada.</p>
+                    <p>Alitas doradas, tiernas por dentro y bañadas en nuestra salsa BBQ ahumada con un toque dulce y especiado.</p>
                     <p>Desde $9.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-2188707691-612x612.jpg" alt="Tacos preparados con carne y vegetales">
+                    <img src="images/istockphoto-2188707691-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Tacos preparados con carne y vegetales">
                     <h3>Tacos Urbanos</h3>
-                    <p>Tortillas calientes, carne sazonada y vegetales frescos.</p>
+                    <p>Tortillas calientes, carne sazonada, vegetales frescos, cilantro y un toque de limón en cada bocado.</p>
                     <p>Desde $8.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-508920822-612x612.jpg" alt="Sándwich gourmet recién preparado">
+                    <img src="images/istockphoto-508920822-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Sándwich gourmet recién preparado">
                     <h3>Sándwich Crunch</h3>
-                    <p>Pollo crujiente, queso fundido y salsa de la casa.</p>
+                    <p>Pollo crujiente, queso fundido, lechuga fresca y salsa de la casa entre rebanadas de pan dorado.</p>
                     <p>Desde $8.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-533454860-612x612.jpg" alt="Aros de cebolla crujientes">
+                    <img src="images/istockphoto-533454860-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Aros de cebolla crujientes">
                     <h3>Aros Crocantes</h3>
-                    <p>Aros de cebolla dorados, crujientes y perfectos para compartir.</p>
+                    <p>Aros de cebolla dorados con una cubierta crujiente y ligera, perfectos para acompañar o compartir.</p>
                     <p>Desde $4.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-614313140-612x612.jpg" alt="Pollo frito crujiente servido en una cesta">
+                    <img src="images/istockphoto-614313140-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Pollo frito crujiente servido en una cesta">
                     <h3>Pollo Crispy</h3>
-                    <p>Pollo marinado, empanizado y frito hasta quedar dorado.</p>
+                    <p>Pollo marinado con especias, empanizado y frito hasta quedar dorado, jugoso y crujiente.</p>
                     <p>Desde $9.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-923577738-612x612.jpg" alt="Ensalada fresca con ingredientes coloridos">
+                    <img src="images/istockphoto-923577738-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Ensalada fresca con ingredientes coloridos">
                     <h3>Ensalada Fresh</h3>
-                    <p>Vegetales frescos, toppings crujientes y aderezo especial.</p>
+                    <p>Vegetales frescos, toppings crujientes, semillas y nuestro aderezo especial para una opción ligera y sabrosa.</p>
                     <p>Desde $6.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-950368628-612x612.jpg" alt="Postre dulce servido como acompañamiento">
+                    <img src="images/istockphoto-950368628-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Postre dulce servido como acompañamiento">
                     <h3>Postre de la Casa</h3>
-                    <p>Un final dulce y cremoso para completar tu experiencia.</p>
+                    <p>Un final dulce y cremoso con textura suave, ideal para completar tu experiencia después de la comida.</p>
                     <p>Desde $4.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/set-of-fast-food-icons-hand-drawn-in-the-doodle-style-illustration-different-types-of-fast-food-white-lines-on-the-black-background-vector.webp" alt="Ilustraciones de diferentes comidas rápidas">
+                    <img src="images/set-of-fast-food-icons-hand-drawn-in-the-doodle-style-illustration-different-types-of-fast-food-white-lines-on-the-black-background-vector.webp" width="612" height="612" loading="lazy" decoding="async" alt="Ilustraciones de diferentes comidas rápidas">
                     <h3>Especial del Chef</h3>
-                    <p>Una selección sorpresa inspirada en nuestros sabores favoritos.</p>
+                    <p>Una selección sorpresa inspirada en nuestros sabores favoritos, preparada con ingredientes frescos del día.</p>
                     <p>Desde $11.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-1323507062-612x612.jpg" alt="Hamburguesa doble con queso cheddar">
+                    <img src="images/istockphoto-1323507062-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Hamburguesa doble con queso cheddar">
                     <h3>Doble Cheddar</h3>
-                    <p>Dos carnes a la parrilla, cheddar fundido, cebolla caramelizada y salsa ahumada.</p>
+                    <p>Dos carnes a la parrilla, doble cheddar fundido, cebolla caramelizada y salsa ahumada en pan tostado.</p>
                     <p>Desde $12.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-1398630614-612x612.jpg" alt="Papas fritas con salsa y queso">
+                    <img src="images/istockphoto-1398630614-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Papas fritas con salsa y queso">
                     <h3>Papas Jalapeño</h3>
-                    <p>Papas doradas con queso, jalapeño y un toque de limón.</p>
+                    <p>Papas doradas con queso fundido, jalapeño fresco, cebollín y un toque de limón para equilibrar el sabor.</p>
                     <p>Desde $6.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-1915346242-612x612.jpg" alt="Pizza de pepperoni recién horneada">
+                    <img src="images/istockphoto-1915346242-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Pizza de pepperoni recién horneada">
                     <h3>Pizza Pepperoni</h3>
-                    <p>Base crujiente, mozzarella y pepperoni ligeramente picante.</p>
+                    <p>Base crujiente, mozzarella derretida y pepperoni ligeramente picante, horneados hasta alcanzar el punto perfecto.</p>
                     <p>Desde $11.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-2177216617-612x612.jpg" alt="Hot dog con cebolla crujiente">
+                    <img src="images/istockphoto-2177216617-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Hot dog con cebolla crujiente">
                     <h3>Hot Dog Crispy</h3>
-                    <p>Salchicha a la parrilla, cebolla crujiente, pepinillos y mostaza de la casa.</p>
+                    <p>Salchicha a la parrilla, cebolla crujiente, pepinillos y mostaza de la casa en un pan suave y tostado.</p>
                     <p>Desde $8.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-2179542678-612x612.jpg" alt="Alitas picantes con salsa buffalo">
+                    <img src="images/istockphoto-2179542678-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Alitas picantes con salsa buffalo">
                     <h3>Alitas Buffalo</h3>
-                    <p>Alitas crujientes con salsa buffalo, apio fresco y aderezo cremoso.</p>
+                    <p>Alitas crujientes con salsa buffalo, apio fresco y aderezo cremoso para combinar sabores picantes y frescos.</p>
                     <p>Desde $10.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-2188707691-612x612.jpg" alt="Tacos de pollo con guacamole">
+                    <img src="images/istockphoto-2188707691-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Tacos de pollo con guacamole">
                     <h3>Tacos de Pollo</h3>
-                    <p>Pollo sazonado, guacamole, pico de gallo y crema sobre tortillas suaves.</p>
+                    <p>Pollo sazonado, guacamole, pico de gallo y crema sobre tortillas suaves, terminados con cilantro fresco.</p>
                     <p>Desde $8.99</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-508920822-612x612.jpg" alt="Sándwich de pollo con vegetales frescos">
+                    <img src="images/istockphoto-508920822-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Sándwich de pollo con vegetales frescos">
                     <h3>Club de Pollo</h3>
-                    <p>Capas de pollo, tocino, lechuga, tomate y mayonesa de hierbas.</p>
+                    <p>Capas de pollo, tocino crujiente, lechuga, tomate y mayonesa de hierbas en un sándwich abundante.</p>
                     <p>Desde $9.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-923577738-612x612.jpg" alt="Ensalada con pollo a la parrilla">
+                    <img src="images/istockphoto-923577738-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Ensalada con pollo a la parrilla">
                     <h3>Ensalada Power</h3>
-                    <p>Mix de hojas verdes, pollo a la parrilla, aguacate, maíz y vinagreta cítrica.</p>
+                    <p>Mix de hojas verdes, pollo a la parrilla, aguacate, maíz y vinagreta cítrica preparada al momento.</p>
                     <p>Desde $8.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
 
                 <article>
-                    <img src="images/istockphoto-950368628-612x612.jpg" alt="Brownie con chocolate y helado">
+                    <img src="images/istockphoto-950368628-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Brownie con chocolate y helado">
                     <h3>Brownie Caliente</h3>
-                    <p>Brownie de chocolate servido caliente, con helado de vainilla y salsa de chocolate.</p>
+                    <p>Brownie de chocolate servido caliente, con helado de vainilla, nueces tostadas y salsa de chocolate.</p>
                     <p>Desde $5.49</p>
                     <a href="#contacto">Pedir ahora</a>
                 </article>
@@ -232,8 +237,8 @@
                 <details open>
                     <summary>Cheesecake de frutos rojos</summary>
                     <div class="dessert-panel">
-                        <img src="postres/a-dessert-with-berries-and-chocolate-on-top-free-photo.jpg" alt="Cheesecake decorado con frutos rojos y chocolate">
-                        <p>Base cremosa, frutos rojos frescos y un delicado toque de chocolate.</p>
+                        <img src="images/postres/a-dessert-with-berries-and-chocolate-on-top-free-photo.jpg" width="612" height="459" loading="lazy" decoding="async" alt="Cheesecake decorado con frutos rojos y chocolate">
+                        <p>Base cremosa de queso, frutos rojos frescos y un delicado toque de chocolate sobre una cubierta crujiente.</p>
                         <strong>Desde $6.49</strong>
                     </div>
                 </details>
@@ -241,8 +246,8 @@
                 <details>
                     <summary>Pastel de chocolate</summary>
                     <div class="dessert-panel">
-                        <img src="postres/chocolate-cake-with-raspberry-on-plate-slice-of-cake-raspberry-cake-wedding-dessert-black-forest-cake-generative-ai-photo.jpg" alt="Rebanada de pastel de chocolate con frambuesas">
-                        <p>Pastel intenso de chocolate con frambuesas y cobertura suave.</p>
+                        <img src="images/postres/chocolate-cake-with-raspberry-on-plate-slice-of-cake-raspberry-cake-wedding-dessert-black-forest-cake-generative-ai-photo.jpg" width="612" height="459" loading="lazy" decoding="async" alt="Rebanada de pastel de chocolate con frambuesas">
+                        <p>Pastel intenso de chocolate con frambuesas frescas y una cobertura suave que se derrite en cada porción.</p>
                         <strong>Desde $6.99</strong>
                     </div>
                 </details>
@@ -250,8 +255,8 @@
                 <details>
                     <summary>Macarons de colores</summary>
                     <div class="dessert-panel">
-                        <img src="postres/colorful-french-macarons-macaroons-cake-delicious-sweet-dessert-on-a-pink-background-with-copyspace-food-background-concept-free-photo.jpg" alt="Macarons franceses de colores sobre una mesa rosada">
-                        <p>Macarons crujientes por fuera, suaves por dentro y rellenos de sabores variados.</p>
+                        <img src="images/postres/colorful-french-macarons-macaroons-cake-delicious-sweet-dessert-on-a-pink-background-with-copyspace-food-background-concept-free-photo.jpg" width="612" height="459" loading="lazy" decoding="async" alt="Macarons franceses de colores sobre una mesa rosada">
+                        <p>Macarons crujientes por fuera, suaves por dentro y rellenos de sabores variados, ideales para compartir.</p>
                         <strong>Desde $5.99</strong>
                     </div>
                 </details>
@@ -259,8 +264,8 @@
                 <details>
                     <summary>Brownie con menta</summary>
                     <div class="dessert-panel">
-                        <img src="postres/decadent-chocolate-brownie-dessert-with-mint-and-whipped-cream-exquisitely-plated-free-photo.jpeg" alt="Brownie de chocolate con crema batida y menta">
-                        <p>Brownie tibio de chocolate, crema batida y hojas frescas de menta.</p>
+                        <img src="images/postres/decadent-chocolate-brownie-dessert-with-mint-and-whipped-cream-exquisitely-plated-free-photo.jpeg" width="612" height="459" loading="lazy" decoding="async" alt="Brownie de chocolate con crema batida y menta">
+                        <p>Brownie tibio de chocolate, crema batida y hojas frescas de menta para un contraste intenso y refrescante.</p>
                         <strong>Desde $5.49</strong>
                     </div>
                 </details>
@@ -268,8 +273,8 @@
                 <details>
                     <summary>Selección dulce</summary>
                     <div class="dessert-panel">
-                        <img src="postres/delicious-dessert-ai-generate-photo.jpg" alt="Selección de postres dulces variados">
-                        <p>Una selección de nuestros bocados dulces para compartir.</p>
+                        <img src="images/postres/delicious-dessert-ai-generate-photo.jpg" width="612" height="459" loading="lazy" decoding="async" alt="Selección de postres dulces variados">
+                        <p>Una selección de nuestros bocados dulces, combinados en una porción especial para compartir.</p>
                         <strong>Desde $8.99</strong>
                     </div>
                 </details>
@@ -277,8 +282,8 @@
                 <details>
                     <summary>Cupcakes de la casa</summary>
                     <div class="dessert-panel">
-                        <img src="postres/delicious-homemade-cupcakes-with-colorful-cream-and-topping-with-candy-and-chocolate-cookies-homemade-autumn-holiday-dessert-free-photo.jpg" alt="Cupcakes caseros con crema de colores y dulces">
-                        <p>Cupcakes esponjosos con crema de colores y toppings crujientes.</p>
+                        <img src="images/postres/delicious-homemade-cupcakes-with-colorful-cream-and-topping-with-candy-and-chocolate-cookies-homemade-autumn-holiday-dessert-free-photo.jpg" width="612" height="459" loading="lazy" decoding="async" alt="Cupcakes caseros con crema de colores y dulces">
+                        <p>Cupcakes esponjosos con crema de colores, toppings crujientes y un acabado dulce preparado en casa.</p>
                         <strong>Desde $4.99</strong>
                     </div>
                 </details>
@@ -286,8 +291,8 @@
                 <details>
                     <summary>Frambuesas con chocolate</summary>
                     <div class="dessert-panel">
-                        <img src="postres/desserts-including-chocolate-raspberries-generative-ai-photo.webp" alt="Postre de chocolate con frambuesas frescas">
-                        <p>Chocolate cremoso y frambuesas frescas en una combinación irresistible.</p>
+                        <img src="images/postres/desserts-including-chocolate-raspberries-generative-ai-photo.webp" width="612" height="459" loading="lazy" decoding="async" alt="Postre de chocolate con frambuesas frescas">
+                        <p>Chocolate cremoso y frambuesas frescas en una combinación irresistible, equilibrada entre dulzor y acidez.</p>
                         <strong>Desde $6.49</strong>
                     </div>
                 </details>
@@ -295,8 +300,8 @@
                 <details>
                     <summary>Panna cotta de mango</summary>
                     <div class="dessert-panel">
-                        <img src="postres/homemade-dessert-panna-cotta-with-mango-jelly-copy-space-top-view-flat-lay-background-traditional-italian-dessert-photo.jpg" alt="Panna cotta casera con gelatina de mango">
-                        <p>Panna cotta italiana, gelatina de mango y un acabado fresco y ligero.</p>
+                        <img src="images/postres/homemade-dessert-panna-cotta-with-mango-jelly-copy-space-top-view-flat-lay-background-traditional-italian-dessert-photo.jpg" width="612" height="459" loading="lazy" decoding="async" alt="Panna cotta casera con gelatina de mango">
+                        <p>Panna cotta italiana de textura suave, gelatina de mango y un acabado fresco, ligero y tropical.</p>
                         <strong>Desde $5.99</strong>
                     </div>
                 </details>
@@ -304,8 +309,8 @@
                 <details>
                     <summary>Tabla gourmet</summary>
                     <div class="dessert-panel">
-                        <img src="postres/seleccion-postres-gourmet-que-incluyen-pasteles-helado-cuadros-pastel_230115-13591.webp" alt="Selección gourmet de pasteles y helado">
-                        <p>Pasteles, helado y pequeños bocados para probar un poco de todo.</p>
+                        <img src="images/postres/seleccion-postres-gourmet-que-incluyen-pasteles-helado-cuadros-pastel_230115-13591.webp" width="612" height="459" loading="lazy" decoding="async" alt="Selección gourmet de pasteles y helado">
+                        <p>Pasteles, helado y pequeños bocados decorados para probar un poco de todo en una experiencia gourmet.</p>
                         <strong>Desde $10.99</strong>
                     </div>
                 </details>
@@ -313,8 +318,8 @@
                 <details>
                     <summary>Creación dulce</summary>
                     <div class="dessert-panel">
-                        <img src="postres/sweet-treat-delight-photo.jpg" alt="Creación dulce decorada para servir">
-                        <p>La sugerencia del día, preparada con ingredientes de temporada.</p>
+                        <img src="images/postres/sweet-treat-delight-photo.jpg" width="612" height="459" loading="lazy" decoding="async" alt="Creación dulce decorada para servir">
+                        <p>La sugerencia del día, preparada con ingredientes de temporada y una decoración especial de nuestra cocina.</p>
                         <strong>Desde $7.49</strong>
                     </div>
                 </details>
@@ -322,8 +327,8 @@
                 <details>
                     <summary>Variedad de postres</summary>
                     <div class="dessert-panel">
-                        <img src="postres/variedad-de-postres-25265030.webp" alt="Variedad de postres para compartir">
-                        <p>Un surtido especial para cerrar la comida con diferentes sabores.</p>
+                        <img src="images/postres/variedad-de-postres-25265030.webp" width="612" height="459" loading="lazy" decoding="async" alt="Variedad de postres para compartir">
+                        <p>Un surtido especial para cerrar la comida con diferentes sabores, texturas y opciones para compartir.</p>
                         <strong>Desde $9.49</strong>
                     </div>
                 </details>
@@ -335,10 +340,10 @@
                 <p>Para compartir</p>
                 <h2 id="titulo-promociones">Promociones de la semana</h2>
 
-                <article>
-                    <img src="images/istockphoto-2001893851-612x612.jpg" alt="Combo de comida rápida para compartir">
-                    <h3>Combo Gourmet</h3>
-                    <p>Dos hamburguesas, papas grandes y dos bebidas.</p>
+                <article aria-labelledby="titulo-combo" aria-describedby="descripcion-combo">
+                    <img src="images/istockphoto-2001893851-612x612.jpg" width="612" height="612" loading="lazy" decoding="async" alt="Combo de comida rápida para compartir">
+                    <h3 id="titulo-combo">Combo Gourmet</h3>
+                    <p id="descripcion-combo">Dos hamburguesas, papas grandes y dos bebidas.</p>
                     <p>Precio especial: $19.99</p>
                     <a href="#contacto">Ordenar promoción</a>
                 </article>
@@ -478,7 +483,8 @@
 
     <script>
         const friesRain = document.querySelector('.fries-rain');
-        const fryCount = 24;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const fryCount = prefersReducedMotion ? 0 : 12;
 
         for (let index = 0; index < fryCount; index += 1) {
             const fry = document.createElement('span');
@@ -494,6 +500,7 @@
         const menuToggle = document.querySelector('.menu-toggle');
         const mainMenu = document.querySelector('#main-menu');
         const soundToggle = document.querySelector('.sound-toggle');
+        const soundIcon = soundToggle.querySelector('[aria-hidden="true"]');
         const siteSound = document.querySelector('#site-sound');
         let soundEnabled = false;
 
@@ -510,7 +517,7 @@
             soundEnabled = !soundEnabled;
             soundToggle.setAttribute('aria-pressed', String(soundEnabled));
             soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonidos' : 'Activar sonidos');
-            soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+            soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
 
             if (soundEnabled) {
                 playSound();
